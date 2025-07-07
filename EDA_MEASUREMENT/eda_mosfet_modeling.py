@@ -1,6 +1,8 @@
 import numpy as np
 import matplotlib.pyplot as plt
 plt.rcParams['font.family'] = 'Malgun Gothic'
+plt.rcParams['font.family'] = 'AppleGothic'
+
 plt.rcParams['axes.unicode_minus'] = False
 
 # 1. Vds 값 생성 (0.5 ~ 255.5, 8비트 해상도, 1000개)
