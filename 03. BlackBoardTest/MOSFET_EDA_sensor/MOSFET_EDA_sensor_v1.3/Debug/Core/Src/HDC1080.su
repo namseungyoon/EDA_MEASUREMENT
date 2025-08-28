@@ -1,0 +1,5 @@
+../Core/Src/HDC1080.c:11:6:HDC1080_initialize	40	static
+../Core/Src/HDC1080.c:46:9:HDC1080_Measurement	48	static
+../Core/Src/HDC1080.c:72:9:HDC1080_testConnection	8	static
+../Core/Src/HDC1080.c:77:10:HDC1080_getDeviceID	16	static
+../Core/Src/HDC1080.c:84:10:HDC1080_ReadBytes	40	static

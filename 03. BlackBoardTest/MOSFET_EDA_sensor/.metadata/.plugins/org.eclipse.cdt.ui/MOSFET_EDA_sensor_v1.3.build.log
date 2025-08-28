@@ -1,0 +1,10 @@
+22:00:24 **** Incremental Build of configuration Debug for project MOSFET_EDA_sensor_v1.3 ****
+make -j11 all 
+arm-none-eabi-size   MOSFET_EDA_sensor_v1.3.elf 
+   text	   data	    bss	    dec	    hex	filename
+  51532	    512	 101048	 153092	  25604	MOSFET_EDA_sensor_v1.3.elf
+Finished building: default.size.stdout
+ 
+
+22:00:25 Build Finished. 0 errors, 0 warnings. (took 202ms)
+

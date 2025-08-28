@@ -1,0 +1,131 @@
+16:04:20 **** Incremental Build of configuration Debug for project GSL_2.7_library_test ****
+make -j11 all 
+arm-none-eabi-gcc "../Core/Src/MOSFET_EDA.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../FATFS/Target -I../FATFS/App -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FatFs/src -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/MOSFET_EDA.d" -MT"Core/Src/MOSFET_EDA.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/MOSFET_EDA.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../FATFS/Target -I../FATFS/App -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FatFs/src -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/MOSFET_EDA.c: In function 'calibration_Ids':
+../Core/Src/MOSFET_EDA.c:14:19: error: 'x' undeclared (first use in this function)
+   14 |                   x = (float)i_Ids;
+      |                   ^
+../Core/Src/MOSFET_EDA.c:14:19: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/MOSFET_EDA.c:15:19: error: 'A' undeclared (first use in this function)
+   15 |                   A[i_Ids][5] = x * x * x * x * x;
+      |                   ^
+../Core/Src/MOSFET_EDA.c:22:19: error: 'B' undeclared (first use in this function)
+   22 |                   B[i_Ids][0] = ln_Ids[i_Ids];
+      |                   ^
+../Core/Src/MOSFET_EDA.c:22:33: error: 'ln_Ids' undeclared (first use in this function); did you mean 'n_Ids'?
+   22 |                   B[i_Ids][0] = ln_Ids[i_Ids];
+      |                                 ^~~~~~
+      |                                 n_Ids
+../Core/Src/MOSFET_EDA.c:37:11: warning: implicit declaration of function 'transpose_matrix' [-Wimplicit-function-declaration]
+   37 |           transpose_matrix(1394, 6, A, A_T);
+      |           ^~~~~~~~~~~~~~~~
+../Core/Src/MOSFET_EDA.c:39:11: warning: implicit declaration of function 'multiply_matrices' [-Wimplicit-function-declaration]
+   39 |           multiply_matrices(6, 1394, A_T, 1394, 6, A, A_T_A);
+      |           ^~~~~~~~~~~~~~~~~
+../Core/Src/MOSFET_EDA.c:41:11: warning: implicit declaration of function 'inverse_matrix' [-Wimplicit-function-declaration]
+   41 |           inverse_matrix(6, A_T_A, A_T_A_I);
+      |           ^~~~~~~~~~~~~~
+../Core/Src/MOSFET_EDA.c:47:50: error: 'B_' undeclared (first use in this function)
+   47 |           multiply_matrices(1394, 6, A, 6, 1, X, B_);
+      |                                                  ^~
+../Core/Src/MOSFET_EDA.c:48:11: warning: implicit declaration of function 'print_matrix' [-Wimplicit-function-declaration]
+   48 |           print_matrix(1394, 1, B_);
+      |           ^~~~~~~~~~~~
+../Core/Src/MOSFET_EDA.c:52:19: error: 'ln_Ids_' undeclared (first use in this function); did you mean 'n_Ids'?
+   52 |                   ln_Ids_[i_Ids] = B_[i_Ids][0];
+      |                   ^~~~~~~
+      |                   n_Ids
+../Core/Src/MOSFET_EDA.c:53:19: error: 'Ids_' undeclared (first use in this function); did you mean 'Ids'?
+   53 |                   Ids_[i_Ids] = exp(ln_Ids_[i_Ids]);
+      |                   ^~~~
+      |                   Ids
+../Core/Src/MOSFET_EDA.c:53:33: warning: implicit declaration of function 'exp' [-Wimplicit-function-declaration]
+   53 |                   Ids_[i_Ids] = exp(ln_Ids_[i_Ids]);
+      |                                 ^~~
+../Core/Src/MOSFET_EDA.c:9:1: note: include '<math.h>' or provide a declaration of 'exp'
+    8 | #include "MOSFET_EDA.h"
+  +++ |+#include <math.h>
+    9 | 
+../Core/Src/MOSFET_EDA.c:53:33: warning: incompatible implicit declaration of built-in function 'exp' [-Wbuiltin-declaration-mismatch]
+   53 |                   Ids_[i_Ids] = exp(ln_Ids_[i_Ids]);
+      |                                 ^~~
+../Core/Src/MOSFET_EDA.c:53:33: note: include '<math.h>' or provide a declaration of 'exp'
+../Core/Src/MOSFET_EDA.c:56:1: warning: control reaches end of non-void function [-Wreturn-type]
+   56 | }
+      | ^
+make: *** [Core/Src/subdir.mk:61: Core/Src/MOSFET_EDA.o] Error 1
+make: *** Waiting for unfinished jobs....
+../Core/Src/main.c: In function 'HAL_TIM_PeriodElapsedCallback':
+../Core/Src/main.c:488:17: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  488 |                 printf("%dm %.3fs\r\n", min, sec+ms);
+      |                 ^~~~~~
+../Core/Src/main.c:34:1: note: include '<stdio.h>' or provide a declaration of 'printf'
+   33 | #include "math.h"
+  +++ |+#include <stdio.h>
+   34 | /* USER CODE END Includes */
+../Core/Src/main.c:488:17: warning: incompatible implicit declaration of built-in function 'printf' [-Wbuiltin-declaration-mismatch]
+  488 |                 printf("%dm %.3fs\r\n", min, sec+ms);
+      |                 ^~~~~~
+../Core/Src/main.c:488:17: note: include '<stdio.h>' or provide a declaration of 'printf'
+../Core/Src/main.c: In function 'Modeling_least_square':
+../Core/Src/main.c:542:9: warning: implicit declaration of function 'transpose_matrix' [-Wimplicit-function-declaration]
+  542 |         transpose_matrix(1394, 6, A, A_T);
+      |         ^~~~~~~~~~~~~~~~
+../Core/Src/main.c:544:9: warning: implicit declaration of function 'multiply_matrices' [-Wimplicit-function-declaration]
+  544 |         multiply_matrices(6, 1394, A_T, 1394, 6, A, A_T_A);
+      |         ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:546:9: warning: implicit declaration of function 'inverse_matrix' [-Wimplicit-function-declaration]
+  546 |         inverse_matrix(6, A_T_A, A_T_A_I);
+      |         ^~~~~~~~~~~~~~
+../Core/Src/main.c:553:9: warning: implicit declaration of function 'print_matrix' [-Wimplicit-function-declaration]
+  553 |         print_matrix(1394, 1, B_);
+      |         ^~~~~~~~~~~~
+../Core/Src/main.c:558:21: error: subscripted value is neither array nor pointer nor vector
+  558 |                 Ids_[i_Ids] = exp(ln_Ids_[i_Ids]);
+      |                     ^
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:563:6: warning: conflicting types for 'transpose_matrix'; have 'void(int,  int,  float (*)[cols], float (*)[rows])'
+  563 | void transpose_matrix(int rows, int cols, float A[rows][cols], float A_transpose[cols][rows]) {
+      |      ^~~~~~~~~~~~~~~~
+../Core/Src/main.c:542:9: note: previous implicit declaration of 'transpose_matrix' with type 'void(int,  int,  float (*)[cols], float (*)[rows])'
+  542 |         transpose_matrix(1394, 6, A, A_T);
+      |         ^~~~~~~~~~~~~~~~
+../Core/Src/main.c:576:6: warning: conflicting types for 'multiply_matrices'; have 'void(int,  int,  float (*)[cols1], int,  int,  float (*)[cols2], float (*)[cols2])'
+  576 | void multiply_matrices(int rows1, int cols1, float A[rows1][cols1], int rows2, int cols2, float B[rows2][cols2], float result[rows1][cols2]) {
+      |      ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:544:9: note: previous implicit declaration of 'multiply_matrices' with type 'void(int,  int,  float (*)[cols1], int,  int,  float (*)[cols2], float (*)[cols2])'
+  544 |         multiply_matrices(6, 1394, A_T, 1394, 6, A, A_T_A);
+      |         ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c: In function 'multiply_matrices':
+../Core/Src/main.c:581:9: warning: incompatible implicit declaration of built-in function 'printf' [-Wbuiltin-declaration-mismatch]
+  581 |         printf("Error: Number of columns in the first matrix must be equal to the number of rows in the second matrix.\n");
+      |         ^~~~~~
+../Core/Src/main.c:581:9: note: include '<stdio.h>' or provide a declaration of 'printf'
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:599:6: warning: conflicting types for 'inverse_matrix'; have 'void(int,  float (*)[N], float (*)[N])'
+  599 | void inverse_matrix(int N, float A[N][N], float A_inv[N][N])
+      |      ^~~~~~~~~~~~~~
+../Core/Src/main.c:546:9: note: previous implicit declaration of 'inverse_matrix' with type 'void(int,  float (*)[N], float (*)[N])'
+  546 |         inverse_matrix(6, A_T_A, A_T_A_I);
+      |         ^~~~~~~~~~~~~~
+../Core/Src/main.c:679:6: warning: conflicting types for 'print_matrix'; have 'void(int,  int,  float (*)[cols])'
+  679 | void print_matrix(int rows, int cols, float matrix[rows][cols]) {
+      |      ^~~~~~~~~~~~
+../Core/Src/main.c:553:9: note: previous implicit declaration of 'print_matrix' with type 'void(int,  int,  float (*)[cols])'
+  553 |         print_matrix(1394, 1, B_);
+      |         ^~~~~~~~~~~~
+../Core/Src/main.c: In function 'print_matrix':
+../Core/Src/main.c:685:13: warning: incompatible implicit declaration of built-in function 'printf' [-Wbuiltin-declaration-mismatch]
+  685 |             printf("%f ", matrix[i][j]);
+      |             ^~~~~~
+../Core/Src/main.c:685:13: note: include '<stdio.h>' or provide a declaration of 'printf'
+../Core/Src/main.c:687:9: warning: incompatible implicit declaration of built-in function 'printf' [-Wbuiltin-declaration-mismatch]
+  687 |         printf("\r\n");
+      |         ^~~~~~
+../Core/Src/main.c:687:9: note: include '<stdio.h>' or provide a declaration of 'printf'
+make: *** [Core/Src/subdir.mk:61: Core/Src/main.o] Error 1
+"make -j11 all" terminated with exit code 2. Build might be incomplete.
+
+16:04:21 Build Failed. 11 errors, 20 warnings. (took 495ms)
+

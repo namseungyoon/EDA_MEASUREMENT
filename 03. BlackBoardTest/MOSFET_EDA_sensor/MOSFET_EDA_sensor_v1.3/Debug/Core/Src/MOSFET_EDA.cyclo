@@ -1,0 +1,4 @@
+../Core/Src/MOSFET_EDA.c:48:6:MOSFET_EDA_Measure_Ids	10
+../Core/Src/MOSFET_EDA.c:143:6:MOSFET_EDA_Calibration_Ids	3
+../Core/Src/MOSFET_EDA.c:179:6:MOSFET_EDA_Start	1
+../Core/Src/MOSFET_EDA.c:191:6:MOSFET_EDA_Get	1

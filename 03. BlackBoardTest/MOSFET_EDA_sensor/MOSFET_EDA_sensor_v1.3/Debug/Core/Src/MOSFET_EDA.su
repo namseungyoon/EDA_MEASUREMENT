@@ -1,0 +1,4 @@
+../Core/Src/MOSFET_EDA.c:48:6:MOSFET_EDA_Measure_Ids	40	static
+../Core/Src/MOSFET_EDA.c:143:6:MOSFET_EDA_Calibration_Ids	64	static
+../Core/Src/MOSFET_EDA.c:179:6:MOSFET_EDA_Start	16	static
+../Core/Src/MOSFET_EDA.c:191:6:MOSFET_EDA_Get	16	static

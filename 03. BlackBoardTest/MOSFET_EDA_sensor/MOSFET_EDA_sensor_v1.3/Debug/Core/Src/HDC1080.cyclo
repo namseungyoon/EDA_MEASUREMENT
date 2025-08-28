@@ -1,0 +1,5 @@
+../Core/Src/HDC1080.c:11:6:HDC1080_initialize	4
+../Core/Src/HDC1080.c:46:9:HDC1080_Measurement	1
+../Core/Src/HDC1080.c:72:9:HDC1080_testConnection	1
+../Core/Src/HDC1080.c:77:10:HDC1080_getDeviceID	1
+../Core/Src/HDC1080.c:84:10:HDC1080_ReadBytes	1

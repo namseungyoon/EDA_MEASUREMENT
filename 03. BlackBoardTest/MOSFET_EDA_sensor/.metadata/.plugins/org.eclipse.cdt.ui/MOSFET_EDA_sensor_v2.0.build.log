@@ -1,0 +1,72 @@
+16:59:24 **** Incremental Build of configuration Debug for project MOSFET_EDA_sensor_v2.0 ****
+make -j11 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:111:29: warning: passing argument 2 of 'HAL_ADC_Start_DMA' from incompatible pointer type [-Wincompatible-pointer-types]
+  111 |   HAL_ADC_Start_DMA(&hadc1, &ADC_value[0], 2);
+      |                             ^~~~~~~~~~~~~
+      |                             |
+      |                             uint16_t * {aka short unsigned int *}
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:295,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc.h:594:72: note: expected 'uint32_t *' {aka 'long unsigned int *'} but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+  594 | HAL_StatusTypeDef HAL_ADC_Start_DMA(ADC_HandleTypeDef* hadc, uint32_t* pData, uint32_t Length);
+      |                                                              ~~~~~~~~~~^~~~~
+../Core/Src/main.c:112:3: warning: implicit declaration of function 'MOSFET_EDA_Measure_Ids' [-Wimplicit-function-declaration]
+  112 |   MOSFET_EDA_Measure_Ids();
+      |   ^~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c: In function 'HAL_TIM_PeriodElapsedCallback':
+../Core/Src/main.c:186:17: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  186 |                 printf("%dm %.2fs. fetEDA_LPF = %.4fv, fetEDA_Vin = %.4fv\r\n", min, sec+ms, fetEDA_LPF, fetEDA_Vin);
+      |                 ^~~~~~
+../Core/Src/main.c:27:1: note: include '<stdio.h>' or provide a declaration of 'printf'
+   26 | #include "gpio.h"
+  +++ |+#include <stdio.h>
+   27 | 
+../Core/Src/main.c:186:17: warning: incompatible implicit declaration of built-in function 'printf' [-Wbuiltin-declaration-mismatch]
+  186 |                 printf("%dm %.2fs. fetEDA_LPF = %.4fv, fetEDA_Vin = %.4fv\r\n", min, sec+ms, fetEDA_LPF, fetEDA_Vin);
+      |                 ^~~~~~
+../Core/Src/main.c:186:17: note: include '<stdio.h>' or provide a declaration of 'printf'
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:205:6: warning: conflicting types for 'MOSFET_EDA_Measure_Ids'; have 'void(void)'
+  205 | void MOSFET_EDA_Measure_Ids(void)
+      |      ^~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:112:3: note: previous implicit declaration of 'MOSFET_EDA_Measure_Ids' with type 'void(void)'
+  112 |   MOSFET_EDA_Measure_Ids();
+      |   ^~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c: In function 'MOSFET_EDA_Measure_Ids':
+../Core/Src/main.c:238:25: warning: incompatible implicit declaration of built-in function 'printf' [-Wbuiltin-declaration-mismatch]
+  238 |                         printf("%d. fetEDA_Rfeed = %.0fohm, fetEDA_LPF = %.4v, fetEDA_Vin = %.4v, fetEDA_Ids = %.4uA\r\n", fetEDA_Rfeed_idx+1, fetEDA_Rfeed[fetEDA_Rfeed_idx], fetEDA_LPF, fetEDA_Vin, fetEDA_Ids[fetEDA_Rfeed_idx][DAC_value]);
+      |                         ^~~~~~
+../Core/Src/main.c:238:25: note: include '<stdio.h>' or provide a declaration of 'printf'
+../Core/Src/main.c:238:77: warning: unknown conversion type character 'v' in format [-Wformat=]
+  238 |                         printf("%d. fetEDA_Rfeed = %.0fohm, fetEDA_LPF = %.4v, fetEDA_Vin = %.4v, fetEDA_Ids = %.4uA\r\n", fetEDA_Rfeed_idx+1, fetEDA_Rfeed[fetEDA_Rfeed_idx], fetEDA_LPF, fetEDA_Vin, fetEDA_Ids[fetEDA_Rfeed_idx][DAC_value]);
+      |                                                                             ^
+../Core/Src/main.c:238:96: warning: unknown conversion type character 'v' in format [-Wformat=]
+  238 |                         printf("%d. fetEDA_Rfeed = %.0fohm, fetEDA_LPF = %.4v, fetEDA_Vin = %.4v, fetEDA_Ids = %.4uA\r\n", fetEDA_Rfeed_idx+1, fetEDA_Rfeed[fetEDA_Rfeed_idx], fetEDA_LPF, fetEDA_Vin, fetEDA_Ids[fetEDA_Rfeed_idx][DAC_value]);
+      |                                                                                                ^
+../Core/Src/main.c:238:115: warning: format '%u' expects argument of type 'unsigned int', but argument 4 has type 'double' [-Wformat=]
+  238 |                         printf("%d. fetEDA_Rfeed = %.0fohm, fetEDA_LPF = %.4v, fetEDA_Vin = %.4v, fetEDA_Ids = %.4uA\r\n", fetEDA_Rfeed_idx+1, fetEDA_Rfeed[fetEDA_Rfeed_idx], fetEDA_LPF, fetEDA_Vin, fetEDA_Ids[fetEDA_Rfeed_idx][DAC_value]);
+      |                                                                                                                ~~~^                                                            ~~~~~~~~~~
+      |                                                                                                                   |                                                            |
+      |                                                                                                                   unsigned int                                                 double
+      |                                                                                                                %.4f
+../Core/Src/main.c:238:32: warning: too many arguments for format [-Wformat-extra-args]
+  238 |                         printf("%d. fetEDA_Rfeed = %.0fohm, fetEDA_LPF = %.4v, fetEDA_Vin = %.4v, fetEDA_Ids = %.4uA\r\n", fetEDA_Rfeed_idx+1, fetEDA_Rfeed[fetEDA_Rfeed_idx], fetEDA_LPF, fetEDA_Vin, fetEDA_Ids[fetEDA_Rfeed_idx][DAC_value]);
+      |                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "MOSFET_EDA_sensor_v2.0.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/namseungyoon/Desktop/PROJECT/01. ERK_project/02. Black_board/MOSFET_EDA_sensor/MOSFET_EDA_sensor_v2.0/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MOSFET_EDA_sensor_v2.0.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: MOSFET_EDA_sensor_v2.0.elf
+ 
+arm-none-eabi-size   MOSFET_EDA_sensor_v2.0.elf 
+arm-none-eabi-objdump -h -S  MOSFET_EDA_sensor_v2.0.elf  > "MOSFET_EDA_sensor_v2.0.list"
+   text	   data	    bss	    dec	    hex	filename
+  39692	    476	   2260	  42428	   a5bc	MOSFET_EDA_sensor_v2.0.elf
+Finished building: default.size.stdout
+ 
+Finished building: MOSFET_EDA_sensor_v2.0.list
+ 
+
+16:59:24 Build Finished. 0 errors, 10 warnings. (took 586ms)
+

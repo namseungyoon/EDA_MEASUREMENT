@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;MOSFET_EDA_sensor_v1.3/MOSFET_EDA_sensor_v1.2.ioc&apos; to &apos;MOSFET_EDA_sensor_v1.3.ioc&apos;" description="Rename resource &apos;MOSFET_EDA_sensor_v1.2.ioc&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="MOSFET_EDA_sensor_v1.2.ioc" name="MOSFET_EDA_sensor_v1.3.ioc" stamp="1711508383901" updateReferences="true"/>
+</session>

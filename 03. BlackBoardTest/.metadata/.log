@@ -1,0 +1,26 @@
+!SESSION 2024-03-21 13:37:41.482 -----------------------------------------------
+eclipse.buildId=Version 1.13.1
+java.version=17.0.6
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=ko_KR
+Framework arguments:  -keyring /Users/namseungyoon/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -keyring /Users/namseungyoon/.eclipse_keyring
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2024-03-21 13:42:14.635
+!MESSAGE Log4j2 initialized with config file /Users/namseungyoon/Desktop/PROJECT/02. STM/01. ERK_project/02. Black_board/.metadata/.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2024-03-21 13:42:20.260
+!MESSAGE Started RMI Server, listening on port 41337
+!SESSION 2024-03-21 14:51:04.053 -----------------------------------------------
+eclipse.buildId=Version 1.13.1
+java.version=17.0.6
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=ko_KR
+Framework arguments:  -keyring /Users/namseungyoon/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -data /Users/namseungyoon/Desktop/PROJECT/01. ERK_project/01. STM_Board/02. Black_board -keyring /Users/namseungyoon/.eclipse_keyring
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2024-03-21 14:51:14.061
+!MESSAGE Log4j2 initialized with config file /Users/namseungyoon/Desktop/PROJECT/01. ERK_project/01. STM_Board/02. Black_board/.metadata/.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2024-03-21 14:51:18.351
+!MESSAGE Started RMI Server, listening on port 41338

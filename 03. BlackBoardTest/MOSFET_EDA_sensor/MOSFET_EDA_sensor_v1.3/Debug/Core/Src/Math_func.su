@@ -1,0 +1,7 @@
+../Core/Src/Math_func.c:11:6:Least_square_method	88	static
+../Core/Src/Math_func.c:85:6:transpose_matrix	32	static
+../Core/Src/Math_func.c:99:6:multiply_matrices	40	static
+../Core/Src/Math_func.c:123:6:inverse_matrix	144	dynamic
+../Core/Src/Math_func.c:203:6:print_matrix	32	static
+../Core/Src/Math_func.c:216:9:allocate_2d_array	40	static
+../Core/Src/Math_func.c:249:6:free_allocate_2d_array	24	static
